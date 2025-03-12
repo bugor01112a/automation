@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+
+<script src="myscript.js"></script> 
+
+<title> Пример простой страницы html</title>
+
+</head>
+
+<body>
+  Моя страница!!!
+<br>
+<br>--------------------------------------------------------------------------
+<br>
+<script>
+
+
+
+
+
+
+let age = +prompt('Введите ваш возраст');
+if (age<=0 || age>=120) {document.write("Введите реальный возраст");}
+else if (isNaN(age)) {document.write("Введите возраст числами");}
+else if (age<18) {document.write("Вы несовершеннолетний");}
+else if (age===18) {document.write("Поздравляем, вы стали совершеннолетним!");}
+else if (age>=18) {document.write("Поздравляем, вы стали совершеннолетним!");}
+else  {document.write("Вы совершеннолетний");}
+
+
+
+
+
+
+
+
+
+
+//document.write("");
+</script>
+</body>
+
+</html>
