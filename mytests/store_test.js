@@ -16,5 +16,14 @@ Scenario("test something", ({ I }) => {
   I.click({ xpath: '//*[@name="agree"]' });
   I.click({ xpath: '//*[@class="btn btn-primary"]' });
   I.see("Your Account Has Been Created!");
-  pause();
+  //pause();
+});
+
+Scenario.only("grab", async ({ I }) => {
+  I.amOnPage(
+    "http://opencart.qatestlab.net/index.php?route=product/product&path=20_259&product_id=29"
+  );
+  let price = await I.grabTextFrom({ xpath: '//div[@class="price"]/span[1]' });
+  //pause();
+  console.log(price);
 });
