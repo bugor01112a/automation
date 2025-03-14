@@ -21,9 +21,11 @@ exports.config = {
     }
   },
   include: {
-    I: './steps_file.js'
+    I: './steps_file.js',
 
     objectsPage: "./pages/objects.js",
+
+    autorisationPage: "./pages/registration.js",
   },
   name: 'automation'
 }
