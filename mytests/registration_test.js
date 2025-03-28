@@ -2,14 +2,13 @@ const { pause } = require("codeceptjs");
 
 Feature("store");
 
-Scenario("test registration", ({ I }) => {
+Scenario("test registration", ({ I, objectsPage }) => {
   I.amOnPage("http://opencart.qatestlab.net/index.php"); //загрузка главнойстраницы
-  I.click({ xpath: '//ul[@class="toggle_cont"]' }); // клик по "My Account"
-  I.click({ xpath: '//a[text()="Register"]' }); // клик по "Register"
+   objectsPage.registrationPage(); //метод открытия страницы регистрации
   I.see("Register Account"); // подтверждение загрузки страницы с элементом "Register Account"
   I.fillField({ xpath: '//*[@id="input-firstname"]' }, "egor"); // заполнение поля "First Name"
   I.fillField({ xpath: '//*[@id="input-lastname"]' }, 5); // заполнение поля "Last Name"
-  I.fillField({ xpath: '//*[@id="input-email"]'}, 'g11ad@gmail.com'); // заполнение поля "E-Mail"
+  I.fillField({ xpath: '//*[@id="input-email"]'}, '111ad@gmail.com'); // заполнение поля "E-Mail"
   I.fillField({ xpath: '//*[@id="input-telephone"]'}, +65432); // заполнение поля "Telephone"
   I.fillField({ xpath: '//*[@id="input-password"]'}, 987654); // заполнение поля "Password"
   I.fillField({ xpath: '//*[@id="input-confirm"]'}, 987654); // заполнение поля "Password Confirm"
